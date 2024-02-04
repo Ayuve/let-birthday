@@ -1,0 +1,694 @@
+/* Set warna utama yang dapat digunakan berulang kali */
+:root {
+    color: #e74c9f;
+}
+
+/* Reset gaya default untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0s linear; /* Transisi tanpa waktu untuk efek responsif */
+}
+
+/* Pengaturan font ukuran dasar untuk kemudahan perhitungan */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth; /* Efek scroll smooth */
+    scroll-padding-top: 6rem; /* Ruang atas untuk anchor link scroll */
+    overflow-x: hidden; /* Menghindari horizontal overflow */
+}
+
+/* Gaya untuk body, termasuk gambar latar belakang */
+body {
+    background: url(image/background.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Gaya umum untuk elemen section */
+section {
+    padding: 2rem 9%;
+}
+
+/* Gaya untuk judul dengan latar belakang transparan */
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, .05);
+}
+
+/* Gaya untuk elemen span dalam judul */
+.heading span {
+    color: #BB9CC0;
+}
+
+
+/* Gaya untuk tombol dengan kelas .btn */
+.btn {
+    display: inline-block; /* Menjadikan tombol elemen inline */
+    margin-top: 1rem; /* Jarak atas dari elemen di atasnya */
+    border-radius: 5rem; /* Membuat sudut border berbentuk bulat */
+    background: #BB9CC0; /* Warna latar belakang tombol */
+    color: #ffff; /* Warna teks tombol */
+    padding: .9rem 3.5rem; /* Padding pada tombol */
+    cursor: pointer; /* Menampilkan kursor saat diarahkan ke tombol */
+    font-size: 20px; /* Ukuran font tombol */
+}
+
+/* Gaya saat tombol dihover */
+.btn:hover {
+    background: #E9A8F2; /* Warna latar belakang saat tombol dihover */
+}
+
+/* Gaya untuk elemen header */
+header {
+    position: fixed; /* Membuat header tetap di posisi atas */
+    top: 0; /* Menempatkan header di bagian atas */
+    left: 0; /* Menempatkan header di sisi kiri */
+    right: 0; /* Menempatkan header di sisi kanan */
+    background: #F2AFEF; /* Warna latar belakang header */
+    padding: 2rem 9%; /* Padding header */
+    display: flex; /* Menggunakan flexbox untuk susunan header */
+    align-items: center; /* Menyusun item secara vertikal di tengah */
+    justify-content: space-between; /* Menyusun item secara horizontal dengan ruang di antara */
+    z-index: 1000; /* Menetapkan indeks z untuk tumpukan elemen */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1); /* Efek bayangan untuk memberikan kedalaman */
+}
+
+/* Gaya untuk elemen logo di dalam header */
+header .logo {
+    font-size: 3rem; /* Ukuran font logo */
+    color: #333; /* Warna teks logo */
+    font-weight: bolder; /* Ketebalan font lebih kuat dari biasanya */
+}
+
+/* Gaya untuk span dalam elemen logo */
+header .logo span {
+    color: #BB9CC0; /* Warna teks span dalam logo */
+}
+
+/* Gaya untuk tautan navigasi dalam header */
+header .navbar a {
+    font-size: 2rem; /* Ukuran font tautan navigasi */
+    padding: 0 1.5rem; /* Padding pada tautan navigasi */
+    color: #666; /* Warna teks tautan navigasi */
+}
+
+/* Gaya saat tautan navigasi dihover */
+header .navbar a:hover {
+    color: #BB9CC0; /* Warna teks tautan navigasi saat dihover */
+}
+
+/* Gaya untuk ikon dalam header */
+header .icons a {
+    font-size: 2.5rem; /* Ukuran font ikon */
+    color: #333; /* Warna ikon */
+    margin-left: 1.5rem; /* Jarak kiri antar ikon */
+}
+
+/* Gaya saat ikon dihover */
+header .icons a:hover {
+    color: #BB9CC0; /* Warna ikon saat dihover */
+}
+
+
+/* Gaya untuk elemen #toggler dalam header */
+header #toggler {
+    display: none; /* Sembunyikan elemen #toggler */
+}
+
+/* Gaya untuk ikon fa-bars dalam header */
+header .fa-bars {
+    font-size: 3rem; /* Ukuran font ikon */
+    color: #333; /* Warna ikon */
+    border-radius: .5rem; /* Membuat sudut border berbentuk bulat */
+    padding: .5rem 1.5rem; /* Padding pada ikon */
+    cursor: pointer; /* Menampilkan kursor saat diarahkan ke ikon */
+    border: .1rem solid rgba(0, 0, 0, .1); /* Border ikon dengan efek bayangan */
+    display: none; /* Sembunyikan ikon fa-bars */
+}
+
+/* Gaya untuk elemen .home */
+.home {
+    display: flex; /* Menggunakan flexbox untuk susunan .home */
+    align-items: center; /* Menyusun item secara vertikal di tengah */
+    min-height: 65vh; /* Tinggi minimum .home setidaknya seluruh tinggi layar */
+    background: url(image/background.jpeg); /* Gambar latar belakang .home */
+    background-size: cover; /* Mengisi seluruh ruang dengan gambar latar belakang */
+    background-position: center; /* Posisi gambar latar belakang di tengah */
+}
+
+/* Gaya untuk elemen .content di dalam .home */
+.home .content {
+    max-width: 50rem; /* Lebar maksimum konten .home */
+}
+
+/* Gaya untuk judul h3 di dalam .content */
+.home .content h3 {
+    font-size: 6rem; /* Ukuran font judul h3 */
+    color: #67729D; /* Warna teks judul h3 */
+}
+
+/* Gaya untuk span di dalam .content */
+.home .content span {
+    font-size: 3.5rem; /* Ukuran font span */
+    color: #BB9CC0; /* Warna teks span */
+    padding: 1rem 0; /* Padding pada span */
+    line-height: 1.5; /* Jarak antar baris pada span */
+}
+
+/* Gaya untuk paragraf p di dalam .content */
+.home .content p {
+    font-size: 1.2rem; /* Ukuran font paragraf p */
+    color: #67729D; /* Warna teks paragraf p */
+    padding: 1rem 0; /* Padding pada paragraf p */
+    line-height: 1.5; /* Jarak antar baris pada paragraf p */
+}
+
+
+/* Gaya untuk elemen .feature-img */
+.feature-img {
+    width: 400px;
+    height: 300px;
+}
+
+/* Gaya untuk elemen .about */
+.about {
+    background-image: url(image/background.jpeg); /* Ganti URL dengan gambar yang diinginkan */
+    background-repeat: no-repeat; /* Menonaktifkan pengulangan gambar */
+    background-size: cover; /* Menyesuaikan ukuran gambar untuk mencakup seluruh elemen */
+    background-position: center; /* Posisi gambar di tengah elemen */
+}
+
+/* Gaya untuk elemen .heading di dalam .about */
+.about .heading {
+    background-color: #F2AFEF; /* Warna latar belakang elemen .heading di dalam .about */
+}
+
+/* Gaya untuk elemen .row di dalam .about */
+.about .row {
+    display: flex; /* Menggunakan flexbox untuk susunan .row */
+    align-items: center; /* Menyusun item secara vertikal di tengah */
+    gap: 2rem; /* Jarak antar item dalam .row */
+    flex-wrap: wrap; /* Mengizinkan wrapping item saat ukuran container terlampaui */
+    padding: 2rem 0; /* Padding pada .row */
+    padding-bottom: 3rem; /* Padding pada bagian bawah .row */
+}
+
+/* Gaya untuk elemen .video-container di dalam .row */
+.about .row .video-container {
+    flex: 1 1 40rem; /* Menetapkan fleksibilitas dan lebar maksimum pada .video-container */
+    position: relative; /* Menggunakan posisi relatif untuk penempatan elemen anak */
+}
+
+/* Gaya untuk elemen video di dalam .video-container */
+.about .row .video-container video {
+    width: 100%; /* Lebar video sebesar 100% dari parent */
+    border: 1.5rem solid #fff; /* Border video dengan ketebalan dan warna tertentu */
+    border-radius: .5rem; /* Membuat sudut border berbentuk bulat pada video */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1); /* Efek bayangan pada video */
+}
+
+
+/* Gaya untuk elemen h3 di dalam .video-container di dalam .row di dalam .about */
+.about .row .video-container h3 {
+    position: absolute; /* Menggunakan posisi absolut untuk penempatan */
+    top: 50%; /* Menempatkan elemen pada 50% tinggi parent */
+    transform: translateY(-50%); /* Menyusun elemen secara vertikal di tengah parent */
+    font-size: 3rem; /* Ukuran font */
+    background: #fff; /* Warna latar belakang */
+    width: 100%; /* Lebar elemen sebesar 100% parent */
+    padding: 1rem 2rem; /* Padding pada elemen */
+    text-align: center; /* Posisi teks di tengah */
+    mix-blend-mode: screen; /* Menggunakan campuran blending mode 'screen' */
+}
+
+/* Gaya untuk elemen .row .content di dalam .about */
+.about .row .content {
+    flex: 1 1 40rem; /* Menetapkan fleksibilitas dan lebar maksimum */
+}
+
+/* Gaya untuk elemen h3 di dalam .row .content di dalam .about */
+.about .row .content h3 {
+    font-size: 3rem; /* Ukuran font */
+    color: #67729D; /* Warna teks */
+}
+
+/* Gaya untuk elemen p di dalam .row .content di dalam .about */
+.about .row .content p {
+    font-size: 1.5rem; /* Ukuran font */
+    color: #BB9CC0; /* Warna teks */
+    padding: .5rem 0; /* Padding pada elemen */
+    padding-top: 1rem; /* Padding atas */
+    line-height: 1.5; /* Tinggi baris */
+}
+
+/* Gaya untuk elemen .icons-container */
+.icons-container {
+    background-image: url(image/background.jpeg) to-repeat; /* Warna latar belakang */
+    display: flex; /* Menggunakan flexbox untuk susunan */
+    flex-wrap: wrap; /* Mengizinkan wrapping item saat ukuran container terlampaui */
+    gap: 1.5rem; /* Jarak antar item dalam .icons-container */
+    padding-top: 5rem; /* Padding atas */
+    padding-bottom: 5rem; /* Padding bawah */
+}
+
+/* Gaya untuk elemen .icons di dalam .icons-container */
+.icons-container .icons {
+    background: #FED9ED; /* Warna latar belakang */
+    border: 1rem solid rgba(0, 0, 0, .1); /* Border dengan ketebalan dan warna tertentu */
+    padding: 2rem; /* Padding pada elemen */
+    display: flex; /* Menggunakan flexbox untuk susunan */
+    align-items: center; /* Menyusun item secara vertikal di tengah */
+    flex: 1 1 25rem; /* Menetapkan fleksibilitas dan lebar maksimum */
+}
+
+/* Gaya untuk elemen img di dalam .icons */
+.icons-container .icons img {
+    height: 5rem; /* Tinggi elemen img */
+    margin-right: 2rem; /* Margin kanan */
+}
+
+/* Gaya untuk elemen h3 di dalam .icons */
+.icons-container .icons h3 {
+    color: #67729D; /* Warna teks */
+    padding-bottom: .5rem; /* Padding bawah */
+    font-size: 1.5rem; /* Ukuran font */
+}
+
+/* Gaya untuk elemen span di dalam .icons */
+.icons-container .icons span {
+    color: #555; /* Warna teks */
+    font-size: 1.3rem; /* Ukuran font */
+}
+
+/* Gaya untuk elemen .products */
+.products {
+    background-image: url(image/background.jpeg) to-repeat; /* Warna latar belakang */
+}
+
+/* Gaya untuk elemen .heading di dalam .products */
+.products .heading {
+    background-color: #F2AFEF; /* Warna latar belakang */
+}
+
+/* Gaya untuk elemen .box-container di dalam .products */
+.products .box-container {
+    display: flex; /* Menggunakan flexbox untuk susunan */
+    flex-wrap: wrap; /* Mengizinkan wrapping item saat ukuran container terlampaui */
+    gap: 1rem; /* Jarak antar item dalam .box-container */
+    background-color: #F7EFE5; /* Warna latar belakang */
+}
+
+/* Gaya untuk elemen .box di dalam .box-container di dalam .products */
+.products .box-container .box {
+    flex: 1 1 calc(33.33% - 1rem); /* Menetapkan fleksibilitas dan lebar maksimum */
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); /* Efek bayangan pada elemen */
+    border-radius: 0.5rem; /* Membuat sudut border berbentuk bulat pada elemen */
+    border: 0.1rem solid #fff; /* Border dengan ketebalan dan warna tertentu */
+    position: relative; /* Menggunakan posisi relatif untuk penempatan elemen anak */
+}
+
+/* Gaya untuk elemen .discount di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .discount {
+    position: absolute; /* Menggunakan posisi absolut untuk penempatan */
+    top: 1rem; /* Menempatkan elemen pada 1rem dari bagian atas parent */
+    left: 1rem; /* Menempatkan elemen pada 1rem dari bagian kiri parent */
+    padding: 2rem; /* Padding pada elemen */
+    font-size: 2rem; /* Ukuran font */
+    color: #67729D; /* Warna teks */
+    background: rgba(255, 51, 153, 0.05); /* Warna latar belakang dengan tingkat transparansi */
+    z-index: 1; /* Menetapkan z-index untuk mengatur tumpukan elemen */
+    border-radius: 3rem; /* Membuat sudut border berbentuk bulat pada elemen */
+}
+
+/* Gaya untuk elemen .image di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .image {
+    position: relative; /* Menggunakan posisi relatif untuk penempatan elemen anak */
+    text-align: center; /* Posisi teks di tengah */
+    padding-top: 2rem; /* Padding atas pada elemen */
+    overflow: hidden; /* Menggunakan overflow hidden untuk menyembunyikan konten yang melampaui batas box */
+}
+
+
+/* Gaya untuk elemen img di dalam .image di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .image img {
+    height: 25rem; /* Tinggi elemen img */
+}
+
+/* Gaya untuk elemen img di dalam .image di dalam .box yang sedang dihover di dalam .box-container di dalam .products */
+.products .box-container .box:hover .image img {
+    transform: scale(1.1); /* Efek scaling saat dihover */
+}
+
+/* Gaya untuk elemen .content di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .content {
+    padding: 2rem; /* Padding pada elemen */
+    text-align: center; /* Posisi teks di tengah */
+}
+
+/* Gaya untuk elemen h3 di dalam .content di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .content h3 {
+    font-size: 2.5rem; /* Ukuran font */
+    color: #333; /* Warna teks */
+}
+
+/* Gaya untuk elemen .price di dalam .content di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .content .price {
+    font-size: 2.5rem; /* Ukuran font */
+    color: #67729D; /* Warna teks */
+    font-weight: bolder; /* Ketebalan teks */
+    padding-top: 1rem; /* Padding atas */
+}
+
+/* Gaya untuk elemen span di dalam .price di dalam .content di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .content span {
+    font-size: 1.5rem; /* Ukuran font */
+    color: #666; /* Warna teks */
+    font-weight: lighter; /* Ketebalan teks */
+    text-decoration: line-through; /* Garis melintang pada teks */
+}
+
+/* Gaya untuk elemen a di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box a {
+    color: #333; /* Warna teks */
+    text-decoration: none; /* Tanpa dekorasi teks */
+    transition: color 0.3s; /* Transisi warna dalam 0.3 detik */
+}
+
+/* Gaya untuk elemen a yang sedang dihover di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box a:hover {
+    color: #312929; /* Warna teks saat dihover */
+}
+
+/* Gaya untuk elemen .discount di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .discount {
+    position: absolute; /* Menggunakan posisi absolut untuk penempatan */
+    top: 1rem; /* Menempatkan elemen pada 1rem dari bagian atas parent */
+    left: 1rem; /* Menempatkan elemen pada 1rem dari bagian kiri parent */
+    padding: 1rem; /* Padding pada elemen */
+    font-size: 2rem; /* Ukuran font */
+    color: #67729D; /* Warna teks */
+    background: rgba(0, 0, 0, .1); /* Warna latar belakang dengan tingkat transparansi */
+    z-index: 1; /* Menetapkan z-index untuk mengatur tumpukan elemen */
+    border-radius: .5rem; /* Membuat sudut border berbentuk bulat pada elemen */
+}
+
+/* Gaya untuk elemen .image di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .image {
+    position: relative; /* Menggunakan posisi relatif untuk penempatan elemen anak */
+    text-align: center; /* Posisi teks di tengah */
+    padding-top: 2rem; /* Padding atas pada elemen */
+    overflow: hidden; /* Menggunakan overflow hidden untuk menyembunyikan konten yang melampaui batas box */
+}
+
+/* Gaya untuk elemen img di dalam .image di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .image img {
+    height: 25rem; /* Tinggi elemen img */
+}
+
+/* Gaya untuk elemen img di dalam .image di dalam .box yang sedang dihover di dalam .box-container di dalam .products */
+.products .box-container .box:hover .image img {
+    transform: scale(1.1); /* Efek scaling saat dihover */
+}
+
+/* Gaya untuk elemen .icons di dalam .image di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .image .icons {
+    position: absolute; /* Menggunakan posisi absolut untuk penempatan */
+    bottom: -7rem; /* Menempatkan elemen pada 7rem dari bagian bawah parent */
+    left: 0; /* Menempatkan elemen pada bagian kiri parent */
+    right: 0; /* Menempatkan elemen pada bagian kanan parent */
+    display: flex; /* Menggunakan flexbox untuk susunan */
+}
+
+/* Gaya untuk elemen .icons di dalam .image di dalam .box yang sedang dihover di dalam .box-container di dalam .products */
+.products .box-container .box:hover .image .icons {
+    bottom: 0; /* Menempatkan elemen pada bagian bawah parent saat dihover */
+}
+
+/* Gaya untuk elemen a di dalam .icons di dalam .image di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .image .icons a {
+    height: 5rem; /* Tinggi elemen a */
+    line-height: 5rem; /* Tinggi baris elemen a */
+    font-size: 2rem; /* Ukuran font */
+    width: 50%; /* Lebar elemen a sebesar 50% parent */
+    background: #67729D; /* Warna latar belakang elemen a */
+    color: #fff; /* Warna teks elemen a */
+}
+
+/* Gaya untuk elemen .cart-btn di dalam .icons di dalam .image di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .image .icons .cart-btn {
+    border-left: .1rem solid #fff7; /* Border kiri dengan ketebalan dan warna tertentu */
+    border-right: .1rem solid #fff7; /* Border kanan dengan ketebalan dan warna tertentu */
+    width: 100%; /* Lebar elemen .cart-btn sebesar 100% parent */
+}
+
+/* Gaya untuk elemen a yang sedang dihover di dalam .icons di dalam .image di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .image .icons a:hover {
+    background: #E7BCDE; /* Warna latar belakang saat dihover */
+}
+
+/* Gaya untuk elemen .content di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .content {
+    padding: 2rem; /* Padding pada elemen */
+    text-align: center; /* Posisi teks di tengah */
+}
+
+/* Gaya untuk elemen h3 di dalam .content di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .content h3 {
+    font-size: 2.5rem; /* Ukuran font */
+    color: #333; /* Warna teks */
+}
+
+/* Gaya untuk elemen .price di dalam .content di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .content .price {
+    font-size: 2.5rem; /* Ukuran font */
+    color: #67729D; /* Warna teks */
+    font-weight: bolder; /* Ketebalan teks */
+    padding-top: 1rem; /* Padding atas */
+}
+
+/* Gaya untuk elemen span di dalam .price di dalam .content di dalam .box di dalam .box-container di dalam .products */
+.products .box-container .box .content .price span {
+    font-size: 2.5rem; /* Ukuran font */
+    color: #999; /* Warna teks */
+    font-weight: lighter; /* Ketebalan teks */
+    text-decoration: line-through; /* Garis melintang pada teks */
+}
+
+
+/* Gaya untuk elemen .contact di dalam .contact */
+.contact {
+    background-image: url(image/background.jpeg) to-repeat; /* Warna latar belakang */
+}
+
+/* Gaya untuk elemen .heading di dalam .contact */
+.contact .heading {
+    background-color: #F2AFEF; /* Warna latar belakang */
+}
+
+/* Gaya untuk elemen .row di dalam .contact */
+.contact .row {
+    display: flex; /* Menggunakan flexbox untuk susunan */
+    flex-wrap: wrap-reverse; /* Membungkus elemen secara responsif dan membalikkan urutannya */
+    gap: 1.5rem; /* Jarak antar elemen */
+    align-items: center; /* Posisi elemen ke tengah sumbu vertikal */
+}
+
+/* Gaya untuk elemen form di dalam .row di dalam .contact */
+.contact .row form {
+    flex: 1 1 40rem; /* Tersedia dalam satu baris, tetap fleksibel, dengan lebar maksimum 40rem */
+    padding: 2rem 2.5rem; /* Padding pada elemen */
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1); /* Efek bayangan */
+    border: .1rem solid rgba(0, 0, 0, .1); /* Border dengan ketebalan dan warna tertentu */
+    background: #F7EFE5; /* Warna latar belakang */
+    border-radius: .5rem; /* Sudut border berbentuk bulat */
+}
+
+/* Gaya untuk elemen .image di dalam .row di dalam .contact */
+.contact .row .image {
+    flex: 1 1 40rem; /* Tersedia dalam satu baris, tetap fleksibel, dengan lebar maksimum 40rem */
+}
+
+/* Gaya untuk elemen img di dalam .image di dalam .row di dalam .contact */
+.contact .row .image img {
+    width: 100%; /* Lebar elemen img sebesar 100% parent */
+}
+
+/* Gaya untuk elemen .box di dalam form di dalam .row di dalam .contact */
+.contact .row form .box {
+    padding: 1rem; /* Padding pada elemen */
+    font-size: 1.7rem; /* Ukuran font */
+    color: #333; /* Warna teks */
+    text-transform: none; /* Tidak ada transformasi teks */
+    border: .1rem solid rgba(0, 0, 0, .1); /* Border dengan ketebalan dan warna tertentu */
+    border-radius: .5rem; /* Sudut border berbentuk bulat */
+    margin: .7rem 0; /* Margin pada elemen */
+    width: 100%; /* Lebar elemen sebesar 100% parent */
+}
+
+/* Gaya untuk elemen .box yang sedang di-focus di dalam form di dalam .row di dalam .contact */
+.contact .row form .box:focus {
+    border-color: #435334; /* Warna border saat elemen sedang di-focus */
+}
+
+/* Gaya untuk elemen textarea di dalam form di dalam .row di dalam .contact */
+.contact .row form textarea {
+    height: 15rem; /* Tinggi elemen textarea */
+    resize: none; /* Tidak dapat diresize */
+}
+
+/* Gaya untuk elemen .footer di dalam .footer */
+.footer {
+    background-color: #BB9CC0; /* Warna latar belakang */
+    padding: 3rem 0; /* Padding atas dan bawah pada elemen */
+}
+
+/* Gaya untuk elemen .box-container di dalam .footer */
+.footer .box-container {
+    display: flex; /* Menggunakan flexbox untuk susunan */
+    flex-wrap: wrap; /* Membungkus elemen secara responsif */
+    justify-content: space-around; /* Menyeimbangkan ruang di sekitar elemen */
+}
+
+/* Gaya untuk elemen .box di dalam .box-container di dalam .footer */
+.footer .box-container .box {
+    flex: 1 1 25rem; /* Tersedia dalam satu baris, tetap fleksibel, dengan lebar maksimum 25rem */
+    max-width: 1 1 25rem; /* Lebar maksimum elemen */
+    box-sizing: border-box; /* Box model dengan menghitung padding dan border sebagai bagian dari lebar elemen */
+    margin: 0 1rem; /* Margin pada elemen */
+}
+
+/* Gaya untuk elemen h3 di dalam .box di dalam .box-container di dalam .footer */
+.footer .box-container .box h3 {
+    color: #666; /* Warna teks */
+    font-size: 1.5rem; /* Ukuran font */
+    padding: 1rem 0; /* Padding atas dan bawah pada elemen */
+}
+/* Gaya untuk elemen a di dalam .box di dalam .box-container di dalam .footer */
+.footer .box-container .box a {
+    display: block; /* Menjadikan elemen sebagai blok */
+    color: #333; /* Warna teks */
+    font-size: 1.5rem; /* Ukuran font */
+    padding: 1rem 0; /* Padding atas dan bawah pada elemen */
+}
+
+/* Gaya untuk elemen a yang sedang dihover di dalam .box di dalam .box-container di dalam .footer */
+.footer .box-container .box a:hover {
+    color: #67729D; /* Warna teks saat dihover */
+    text-decoration: underline; /* Garis bawah pada teks */
+}
+/* Gaya untuk elemen .box di dalam .box-container di dalam .footer */
+.footer .box-container .box-2 {
+    flex: 1 1 25rem; /* Tersedia dalam satu baris, tetap fleksibel, dengan lebar maksimum 25rem */
+    max-width: 1 1 25rem; /* Lebar maksimum elemen */
+    box-sizing: border-box; /* Box model dengan menghitung padding dan border sebagai bagian dari lebar elemen */
+    margin-top: 50px; /* Margin pada elemen */
+}
+
+/* Gaya untuk elemen h3 di dalam .box di dalam .box-container di dalam .footer */
+.footer .box-container .box-2 h3 {
+    color: #666; /* Warna teks */
+    font-size: 1.5rem; /* Ukuran font */
+    padding-top: 60px; /* Padding atas dan bawah pada elemen */
+}
+
+/* Gaya untuk elemen a di dalam .box di dalam .box-container di dalam .footer */
+.footer .box-container .box a {
+    display: block; /* Menjadikan elemen sebagai blok */
+    color: #333; /* Warna teks */
+    font-size: 1.5rem; /* Ukuran font */
+    padding: 1rem 0; /* Padding atas dan bawah pada elemen */
+}
+
+/* Gaya untuk elemen a yang sedang dihover di dalam .box di dalam .box-container di dalam .footer */
+.footer .box-container .box a:hover {
+    color: #67729D; /* Warna teks saat dihover */
+    text-decoration: underline; /* Garis bawah pada teks */
+}
+
+/* Media queries untuk responsif pada perangkat dengan lebar maksimum 991px */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%; /* Ukuran font pada elemen html */
+    }
+    header {
+        padding: 2rem; /* Padding pada elemen header */
+    }
+    section {
+        padding: 2rem; /* Padding pada elemen section */
+    }
+    .home {
+        background-position: left; /* Posisi latar belakang di sebelah kiri */
+    }
+}
+
+/* Media queries untuk responsif pada perangkat dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block; /* Menjadikan elemen .fa-bars sebagai blok */
+    }
+    header .navbar {
+        position: absolute; /* Posisi elemen .navbar */
+        top: 100%; /* Jarak dari bagian atas parent */
+        left: 0; /* Posisi dari kiri parent */
+        right: 0; /* Posisi dari kanan parent */
+        background: #eee; /* Warna latar belakang */
+        border-top: .1rem solid rgba(0, 0, 0, .1); /* Garis di bagian atas elemen */
+        clip-path: polygon(0 0, 100% 0, 0 0); /* Bentuk clip-path */
+    }
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Bentuk clip-path saat tombol toggler di-check */
+    }
+    header .navbar a {
+        margin: 1.5rem; /* Margin pada elemen .navbar a */
+        padding: 1.5rem; /* Padding pada elemen .navbar a */
+        background: #fff; /* Warna latar belakang */
+        border: .1rem solid rgba(0, 0, 0, .1); /* Border dengan ketebalan dan warna tertentu */
+        display: block; /* Menjadikan elemen .navbar a sebagai blok */
+    }
+    .home .content {
+        max-width: 100%; /* Lebar maksimum 100% untuk perangkat dengan lebar <= 768px */
+    }   
+    .home .content h3 {
+        font-size: 5rem; /* Ukuran font */
+    }
+    .home .content span {
+        font-size: 2.5rem; /* Ukuran font */
+    }
+}
+
+/* Gaya untuk elemen .icons h3 di dalam .icons-container */
+.icons-container .icons h3 {
+    font-size: 2rem; /* Ukuran font */
+}
+
+/* Gaya untuk elemen .icons span di dalam .icons-container */
+.icons-container .icons span {
+    font-size: 1.7rem; /* Ukuran font */
+}
+
+/* Media queries untuk responsif pada perangkat dengan lebar maksimum 450px */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%; /* Ukuran font pada elemen html */
+    }
+    .heading {
+        font-size: 3rem; /* Ukuran font */
+    }
+}
+@media (max-width: 768px) {
+    .feature-img {
+        max-width: 100%; /* Sesuaikan lebar gambar pada layar yang lebih kecil */
+        margin: 2rem 0; /* Atur margin di atas dan bawah gambar pada layar kecil agar tidak menumpuk dengan teks */
+    }
+}
